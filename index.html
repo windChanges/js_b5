@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buổi 5</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Flowbite -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Bài 1: Quản lý sinh viên -->
+    <h1 class="text-center mt-10 text-xl font-bold">Tính Điểm</h1>
+    <form class="max-w-sm mx-auto">
+      <div class="grid gap-6 grid-cols-2">
+        <div>
+          <div class="mb-5">
+            <label
+              for="math"
+              class="mt-10 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Điểm Toán</label
+            >
+            <input
+              type="number"
+              id="math"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Nhập điểm toán của bạn..."
+              required
+            />
+          </div>
+          <div class="mb-5">
+            <label
+              for="physics"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Điểm Lý</label
+            >
+            <input
+              type="number"
+              id="physics"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Nhập điểm lý của bạn..."
+              required
+            />
+          </div>
+          <div class="mb-5">
+            <label
+              for="chemistry"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Điểm Hóa</label
+            >
+            <input
+              type="number"
+              id="chemistry"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Nhập điểm hóa của bạn..."
+              required
+            />
+          </div>
+        </div>
+        <div>
+          <div class="mb-5">
+            <label
+              for="kvut"
+              class="mt-10 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Khu vực ưu tiên</label
+            >
+            <input
+              type="text"
+              id="kvut"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Nhập khu vực của bạn..."
+              required
+            />
+          </div>
+          <div class="mb-5">
+            <label
+              for="dtut"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Đối tượng ưu tiên</label
+            >
+            <input
+              type="number"
+              id="dtut"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Nhập đối tượng ưu tiên của bạn..."
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        id="btnSubmit"
+      >
+        Submit
+      </button>
+
+      <div id="Show_Result1" class="mt-5"></div>
+    </form>
+    <hr />
+    <!-- Bài 2 -->
+    <h1 class="text-center mt-10 text-xl font-bold">Tính Tiền điện</h1>
+    <form class="max-w-sm mx-auto">
+      <div class="grid gap-6 grid-cols-1">
+        <div>
+          <div class="mb-5">
+            <label
+              for="name"
+              class="mt-10 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Họ Tên</label
+            >
+            <input
+              type="text"
+              id="name"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Nhập tên của bạn..."
+              required
+            />
+          </div>
+          <div class="mb-5">
+            <label
+              for="kwDien"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Số KW</label
+            >
+            <input
+              type="number"
+              id="kwDien"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Nhập số KW điện tiêu thụ của bạn"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        id="btnSubmit1"
+      >
+        Submit
+      </button>
+      <div id="Show_Result2" class="mt-5"></div>
+    </form>
+    <hr />
+
+    <!-- Bài 3 -->
+    <h1 class="text-center mt-10 text-xl font-bold">Tính Tiền Thuế</h1>
+    <form class="max-w-sm mx-auto">
+      <div class="grid gap-6 grid-cols-1">
+        <div>
+          <div class="mb-5">
+            <label
+              for="name1"
+              class="mt-10 block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Họ Tên</label
+            >
+            <input
+              type="text"
+              id="name1"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Nhập tên của bạn..."
+              required
+            />
+          </div>
+          <div class="mb-5">
+            <label
+              for="tongThu"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Tổng thu nhập</label
+            >
+            <input
+              type="number"
+              id="tongThu"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Nhập tổng thu nhập của bạn..."
+              required
+            />
+          </div>
+          <div class="mb-5">
+            <label
+              for="people"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >Số người phụ thuộc</label
+            >
+            <input
+              type="number"
+              id="people"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Nhập số người phụ thuộc..."
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        id="btnSubmit2"
+      >
+        Submit
+      </button>
+      <div id="Show_Result3" class="mt-5"></div>
+    </form>
+    <hr />
+
+    <!-- Bài 4 -->
+<h1 class="text-center mt-10 text-xl font-bold">Tính Tiền Cáp</h1>
+<form class="max-w-sm mx-auto" id="formCable">
+  <div class="mb-5">
+    <label
+      for="maKH"
+      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      >Mã Khách Hàng</label
+    >
+    <input
+      type="text"
+      id="maKH"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+             focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 
+             dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 
+             dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      placeholder="Nhập mã khách hàng..."
+      required
+    />
+  </div>
+
+  <div class="mb-5">
+    <label
+      for="loaiKH"
+      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      >Loại Khách Hàng</label
+    >
+    <select
+      id="loaiKH"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+             focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 
+             dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 
+             dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      required
+    >
+      <option value="">-- Chọn loại khách hàng --</option>
+      <option value="ND">Nhà Dân</option>
+      <option value="DN">Doanh Nghiệp</option>
+    </select>
+  </div>
+
+  <div class="mb-5" id="soKetNoiDiv" style="display: none;">
+    <label
+      for="soKetNoi"
+      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      >Số kết nối</label
+    >
+    <input
+      type="number"
+      id="soKetNoi"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+             focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 
+             dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 
+             dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      placeholder="Nhập số kết nối..."
+    />
+  </div>
+
+  <div class="mb-5">
+    <label
+      for="soKenh"
+      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      >Số kênh cao cấp</label
+    >
+    <input
+      type="number"
+      id="soKenh"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+             focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 
+             dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 
+             dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      placeholder="Nhập số kênh cao cấp..."
+      required
+    />
+  </div>
+
+  <button
+    type="submit"
+    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none 
+           focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto 
+           px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 
+           dark:focus:ring-blue-800"
+  >
+    Submit
+  </button>
+
+  <div id="Show_Result4" class="mt-5 text-lg font-bold text-green-600"></div>
+</form>
+
+    <!-- main.js -->
+    <script src="./js/main.js"></script>
+    <!-- Flowbite JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  </body>
+</html>
